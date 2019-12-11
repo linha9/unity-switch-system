@@ -7,27 +7,30 @@ public class NickController : MonoBehaviour
     public float speed = 10.0f;
 
     private Rigidbody2D rb2d;
+    private List<Collider2D> colliders;
 
     private float horizontalMove;
     private float verticalMove;
 
+    #region Unity Cycle
     private void Awake()
     {
-        horizontalMove = 0.0f;
-        verticalMove = 0.0f;
+        this.horizontalMove = 0.0f;
+        this.verticalMove = 0.0f;
 
-        rb2d = GetComponent<Rigidbody2D>();
+        this.rb2d = GetComponent<Rigidbody2D>();
+        this.colliders = new List<Collider2D>();
     }
-
-    private void Start()
-    {
-            
-    }
-
 
     private void Update()
     {
         updatePlayerInputMovement();
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            // FOR LATER: Use raycasting, Use events to handle input system
+            Debug.Log("Activate pressed");
+        }
     }
 
     private void FixedUpdate()
@@ -36,7 +39,22 @@ public class NickController : MonoBehaviour
         {
             Move();
         }
+
+        
     }
+    #endregion Unity Cycle
+
+    #region Unity Events Handler
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        colliders.Add(collider);
+    }
+
+    private void OnTriggerExit2D(Collider2D collider)
+    {
+        colliders.Remove(collider);
+    }
+    #endregion
 
     private void Move()
     {
