@@ -26,7 +26,7 @@ public class NickController : MonoBehaviour
     {
         updatePlayerInputMovement();
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Activate"))
         {
             // FOR LATER: Use raycasting, Use events to handle input system
             Debug.Log("Activate pressed");
