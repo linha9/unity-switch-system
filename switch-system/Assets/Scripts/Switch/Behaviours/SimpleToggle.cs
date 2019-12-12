@@ -1,24 +1,24 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class SimpleToggle : IToggleBehaviour
+public class SimpleToggleBehaviour : IToggleBehaviour
 {
-    public SimpleToggle()
+    public SimpleToggleBehaviour()
     {
 
     }
 
-    public bool Toggle(bool isOn, List<GameObject> switchables)
+    public void Toggle(Switch s)
     {
-        if (!isOn)
+        if (!s.IsOn)
         {
-            switchables?.ForEach(s => s.GetComponent<ISwitchable>()?.TurnOn());
-            return true;
+            s.Switchables?.ForEach(switchable => switchable.GetComponent<ISwitchable>()?.TurnOn());
+            s.IsOn = true;
         }
         else
         {
-            switchables?.ForEach(s => s.GetComponent<ISwitchable>()?.TurnOff());
-            return false;
+            s.Switchables?.ForEach(switchable => switchable.GetComponent<ISwitchable>()?.TurnOff());
+            s.IsOn = false;
         }
     }
 }

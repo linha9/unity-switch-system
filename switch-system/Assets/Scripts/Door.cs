@@ -18,7 +18,6 @@ public class Door : MonoBehaviour, ISwitchable
 
     public void TurnOff()
     {
-        Debug.Log("run");
         if (isOpen)
         {
             this.isOpen = false;
