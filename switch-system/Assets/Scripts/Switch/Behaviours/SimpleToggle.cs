@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
-
-public class SimpleToggleBehaviour : IToggleBehaviour
+﻿public class SimpleToggleBehaviour : IToggleBehaviour
 {
     public SimpleToggleBehaviour()
     {

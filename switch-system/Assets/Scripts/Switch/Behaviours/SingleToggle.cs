@@ -1,27 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class SingleToggleBehaviour : IToggleBehaviour
+﻿public class SingleToggleBehaviour : IToggleBehaviour
 {
-    public bool HasBeenUsed { get; private set; }
+    private bool hasBeenUsed;
 
     public SingleToggleBehaviour(bool hasBeenUsed)
     {
-        this.HasBeenUsed = hasBeenUsed;
+        this.hasBeenUsed = hasBeenUsed;
     }
 
     public void Toggle(Switch s)
     {
-        if (!s.IsOn && !HasBeenUsed)
+        if (!s.IsOn && !hasBeenUsed)
         {
-            this.HasBeenUsed = true;
+            this.hasBeenUsed = true;
             s.Switchables?.ForEach(switchable => switchable.GetComponent<ISwitchable>()?.TurnOn());
             s.IsOn = true;
         }
-        else if (s.IsOn && !HasBeenUsed)
+        else if (s.IsOn && !hasBeenUsed)
         {
-            this.HasBeenUsed = true;
+            this.hasBeenUsed = true;
             s.Switchables?.ForEach(switchable => switchable.GetComponent<ISwitchable>()?.TurnOff());
             s.IsOn = false;
         }

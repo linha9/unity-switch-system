@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class Switch : MonoBehaviour
@@ -7,13 +6,12 @@ public class Switch : MonoBehaviour
     [SerializeField]
     private List<GameObject> switchables;
     [SerializeField]
-    private SwitchType type;
+    private SwitchType type = SwitchType.TOGGLE;
 
     private IToggleBehaviour toggleBehaviour;
 
     public List<GameObject> Switchables { get => this.switchables; private set { this.switchables = value; } }
     public bool IsOn { get; set; }
-
 
     #region Unity Cycle
     private void Awake()
