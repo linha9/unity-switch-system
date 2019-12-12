@@ -29,7 +29,7 @@ public class NickController : MonoBehaviour
         if (Input.GetButtonDown("Activate"))
         {
             // FOR LATER: Use raycasting, Use events to handle input system
-            Debug.Log("Activate pressed");
+            this.colliders.ForEach(collider => collider.GetComponent<Switch>()?.Toggle());
         }
     }
 
