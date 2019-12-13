@@ -42,7 +42,7 @@ public class NickController : MonoBehaviour
 
         
     }
-    #endregion Unity Cycle
+    #endregion
 
     #region Unity Events Handler
     private void OnTriggerEnter2D(Collider2D collider)
