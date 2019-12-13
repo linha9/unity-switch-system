@@ -41,9 +41,9 @@ public class Switch : MonoBehaviour
     }
     #endregion
 
-    public void Toggle()
+    public virtual void Toggle()
     {
-        if (isActive)
+        if (this.IsActive)
         {
             this.toggleBehaviour.Toggle(this);
         }
