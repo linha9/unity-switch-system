@@ -8,6 +8,7 @@ public class NickController : MonoBehaviour
 
     private Rigidbody2D rb2d;
     private List<Collider2D> colliders;
+    private Animator animator;
 
     private float horizontalMove;
     private float verticalMove;
@@ -19,6 +20,7 @@ public class NickController : MonoBehaviour
         this.verticalMove = 0.0f;
 
         this.rb2d = GetComponent<Rigidbody2D>();
+        this.animator = GetComponent<Animator>();
         this.colliders = new List<Collider2D>();
     }
 
@@ -66,5 +68,7 @@ public class NickController : MonoBehaviour
     {
         horizontalMove = Input.GetAxis("Horizontal");
         verticalMove = Input.GetAxis("Vertical");
+
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
     }
 }
