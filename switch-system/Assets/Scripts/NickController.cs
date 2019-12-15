@@ -12,12 +12,14 @@ public class NickController : MonoBehaviour
 
     private float horizontalMove;
     private float verticalMove;
+    private bool facingRight;
 
     #region Unity Cycle
     private void Awake()
     {
         this.horizontalMove = 0.0f;
         this.verticalMove = 0.0f;
+        this.facingRight = true ;
 
         this.rb2d = GetComponent<Rigidbody2D>();
         this.animator = GetComponent<Animator>();
@@ -69,6 +71,28 @@ public class NickController : MonoBehaviour
         horizontalMove = Input.GetAxis("Horizontal");
         verticalMove = Input.GetAxis("Vertical");
 
+        if (horizontalMove > 0.1f && !facingRight)
+        {
+            Flip();
+            this.facingRight = true;
+        }
+        else if (horizontalMove < -0.1f && facingRight)
+        {
+            Flip();
+            this.facingRight = false;
+        }
+
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+    }
+
+    private void Flip()
+    {
+        // Switch the way the player is labelled as facing
+        facingRight = !facingRight;
+
+        // Multiply the player's x local scale by -1
+        Vector2 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
 }

@@ -130,7 +130,7 @@ PrefabInstance:
     - target: {fileID: 5318705463131008386, guid: 19464cdd10d7ddd4c93f5d74e8c9332d,
         type: 3}
       propertyPath: m_Name
-      value: w
+      value: Switch 2
       objectReference: {fileID: 0}
     - target: {fileID: 5318705463131008412, guid: 19464cdd10d7ddd4c93f5d74e8c9332d,
         type: 3}
@@ -170,7 +170,7 @@ PrefabInstance:
     - target: {fileID: 5318705463131008412, guid: 19464cdd10d7ddd4c93f5d74e8c9332d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5318705463131008412, guid: 19464cdd10d7ddd4c93f5d74e8c9332d,
         type: 3}
@@ -377,6 +377,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3229600951207859440}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &692922099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3229600950580109396, guid: eb2e29ca6e32b8641bb07e91bb8463c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 3229600951207859440}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &692922104
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692922099}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a56740f112fb45d47938513ba580cfeb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &743344500
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,6 +598,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1158516482 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5318705463131008386, guid: 19464cdd10d7ddd4c93f5d74e8c9332d,
+    type: 3}
+  m_PrefabInstance: {fileID: 96459671}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1158516487
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158516482}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aa94ea5b08f87a34db56231716b9ba87, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1564141251
 GameObject:
   m_ObjectHideFlags: 0
@@ -9170,7 +9220,7 @@ PrefabInstance:
     - target: {fileID: 3076056857463211238, guid: eba868b227e729041b86459f93d71c6c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3076056857463211238, guid: eba868b227e729041b86459f93d71c6c,
         type: 3}
@@ -9239,7 +9289,7 @@ PrefabInstance:
     - target: {fileID: 3229600950580109397, guid: eb2e29ca6e32b8641bb07e91bb8463c6,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3229600950580109398, guid: eb2e29ca6e32b8641bb07e91bb8463c6,
         type: 3}
@@ -9348,7 +9398,7 @@ PrefabInstance:
     - target: {fileID: 3846931873179947171, guid: 180d006fd9c63a140a4e47425362a02d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3846931873179947171, guid: 180d006fd9c63a140a4e47425362a02d,
         type: 3}
@@ -9382,7 +9432,7 @@ PrefabInstance:
     - target: {fileID: 5318705463131008386, guid: 19464cdd10d7ddd4c93f5d74e8c9332d,
         type: 3}
       propertyPath: m_Name
-      value: Lever
+      value: Switch 1
       objectReference: {fileID: 0}
     - target: {fileID: 5318705463131008412, guid: 19464cdd10d7ddd4c93f5d74e8c9332d,
         type: 3}
